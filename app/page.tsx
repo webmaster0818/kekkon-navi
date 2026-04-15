@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "結婚相談所おすすめ6社を徹底比較【2026年最新】",
@@ -19,7 +20,7 @@ const companies = [
       "お見合い料・成婚料なし",
       "リクルート運営の安心感",
     ],
-    accent: "#c45b84",
+    accent: "#d4735e",
     badge: "満足度No.1",
   },
   {
@@ -52,7 +53,7 @@ const companies = [
       "成婚率50.4%の実績",
       "質の高い会員層",
     ],
-    accent: "#5b8a6b",
+    accent: "#1e3a5f",
     badge: "成婚率高",
   },
   {
@@ -63,7 +64,7 @@ const companies = [
       "3つの連盟で会員25.4万人",
       "スマホで完結できる手軽さ",
     ],
-    accent: "#4c6e8a",
+    accent: "#4c8a6b",
     badge: "コスパ最強",
   },
   {
@@ -74,7 +75,7 @@ const companies = [
       "PDCAサイクルで婚活を最適化",
       "成婚退会者の65.6%が1年以内",
     ],
-    accent: "#a8476d",
+    accent: "#b85a47",
     badge: "成婚率No.1",
   },
 ];
@@ -85,18 +86,8 @@ const reasons = [
     description:
       "人気の結婚相談所6社を料金・会員数・成婚率・サポートなど複数の観点から徹底比較。わかりやすく整理しています。",
     icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-        />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
   },
@@ -105,18 +96,8 @@ const reasons = [
     description:
       "メリットだけでなくデメリットも正直にお伝え。実際の口コミも含めて偏りのない情報を提供します。",
     icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-        />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
   },
@@ -125,18 +106,8 @@ const reasons = [
     description:
       "コスパ重視、サポート重視、会員数重視など、あなたの婚活スタイルに合った相談所をタイプ別にご提案します。",
     icon: (
-      <svg
-        className="w-8 h-8"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.5}
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-        />
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
       </svg>
     ),
   },
@@ -188,30 +159,43 @@ export default function Home() {
 
       {/* Hero */}
       <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#fdf2f6] via-[#faf5ee] to-[#f3eef7]" />
-        <div className="absolute top-10 right-10 w-32 h-32 bg-[#c45b84]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-40 h-40 bg-[#9b8ec4]/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#c9a76c]/8 rounded-full blur-3xl" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#fef5f2] via-[#faf5ee] to-[#fffbf7]" />
+        <div className="absolute top-10 right-10 w-32 h-32 bg-[#d4735e]/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 left-10 w-40 h-40 bg-[#c9a76c]/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[#9b8ec4]/5 rounded-full blur-3xl" />
 
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <p className="inline-block text-xs font-semibold text-[#c9a76c] bg-[#faf5ee] px-4 py-1.5 rounded-full mb-6 tracking-wider border border-[#f0dde3]">
-            結婚相談所おすすめ比較 2026年版
-          </p>
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
-            理想のパートナーに出会える
-            <br />
-            <span className="text-gradient">結婚相談所を見つけよう</span>
-          </h1>
-          <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
-            「そろそろ本気で結婚したい」「自分に合う相手と出会いたい」
-            <br className="hidden md:block" />
-            人気の結婚相談所6社を徹底比較して、
-            <br className="hidden md:block" />
-            あなたにぴったりの相談所選びをお手伝いします。
-          </p>
-          <Link href="/ranking/" className="btn-cta text-base md:text-lg">
-            おすすめ6社を比較する
-          </Link>
+        <div className="relative max-w-5xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="text-center md:text-left">
+            <p className="inline-block text-xs font-semibold text-[#c9a76c] bg-[#faf5ee] px-4 py-1.5 rounded-full mb-6 tracking-wider border border-[#edddd5]">
+              MARRIAGE AGENCY COMPARISON 2026
+            </p>
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight mb-6">
+              理想のパートナーに出会える
+              <br />
+              <span className="text-gradient">結婚相談所を見つけよう</span>
+            </h1>
+            <p className="text-gray-600 text-sm md:text-base max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
+              「そろそろ本気で結婚したい」「自分に合う相手と出会いたい」
+              <br className="hidden md:block" />
+              人気の結婚相談所6社を徹底比較して、
+              <br className="hidden md:block" />
+              あなたにぴったりの相談所選びをお手伝いします。
+            </p>
+            <Link href="/ranking/" className="btn-cta text-base md:text-lg">
+              おすすめ6社を比較する
+            </Link>
+          </div>
+          <div className="relative mx-auto w-full max-w-sm">
+            <div className="absolute -inset-4 bg-gradient-to-tr from-[#d4735e]/20 via-[#c9a76c]/15 to-[#9b8ec4]/15 rounded-3xl blur-2xl" />
+            <Image
+              src="/images/hero-couple.png"
+              alt="幸せなカップル"
+              width={400}
+              height={400}
+              className="relative rounded-2xl shadow-lg"
+              priority
+            />
+          </div>
         </div>
       </section>
 
@@ -267,7 +251,7 @@ export default function Home() {
 
       {/* Reasons */}
       <section className="section-light py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-[#c45b84]/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-48 h-48 bg-[#d4735e]/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-36 h-36 bg-[#c9a76c]/5 rounded-full blur-3xl" />
         <div className="relative max-w-5xl mx-auto px-4">
           <h2 className="text-xl md:text-2xl font-bold text-center text-gray-900 mb-10">
@@ -276,7 +260,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {reasons.map((reason) => (
               <div key={reason.title} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#fdf2f6] to-[#faf5ee] text-[#c45b84] mb-4 shadow-sm">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[#fef5f2] to-[#faf5ee] text-[#d4735e] mb-4 shadow-sm">
                   {reason.icon}
                 </div>
                 <h3 className="text-base font-bold text-gray-900 mb-2">
@@ -301,12 +285,12 @@ export default function Home() {
             {faqs.map((faq) => (
               <details
                 key={faq.question}
-                className="group border border-[#f0dde3] rounded-xl"
+                className="group border border-[#edddd5] rounded-xl"
               >
-                <summary className="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 hover:bg-[#fdf2f6] rounded-xl transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer px-5 py-4 text-sm font-semibold text-gray-900 hover:bg-[#fef5f2] rounded-xl transition-colors">
                   <span>{faq.question}</span>
                   <svg
-                    className="w-5 h-5 text-[#c45b84] shrink-0 ml-4 group-open:rotate-180 transition-transform"
+                    className="w-5 h-5 text-[#d4735e] shrink-0 ml-4 group-open:rotate-180 transition-transform"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -331,23 +315,34 @@ export default function Home() {
       {/* CTA */}
       <section className="section-primary-light py-16 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-[#c9a76c]/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-[#c45b84]/10 rounded-full blur-3xl" />
-        <div className="relative max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
-            まずは無料カウンセリングで
-            <br />
-            あなたに合う相談所を見つけよう
-          </h2>
-          <p className="text-sm text-gray-600 mb-8 leading-relaxed">
-            6つの結婚相談所を比較して、
-            <br className="hidden md:block" />
-            あなたにぴったりの相談所を見つけてください。
-            <br className="hidden md:block" />
-            まずは無料カウンセリングから始めましょう。
-          </p>
-          <Link href="/ranking/" className="btn-cta text-base md:text-lg">
-            おすすめ6社の比較を見る
-          </Link>
+        <div className="absolute bottom-0 right-1/4 w-40 h-40 bg-[#d4735e]/10 rounded-full blur-3xl" />
+        <div className="relative max-w-4xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div className="order-2 md:order-1 mx-auto w-full max-w-xs">
+            <Image
+              src="/images/cta-couple.png"
+              alt="幸せに歩くカップル"
+              width={320}
+              height={320}
+              className="rounded-2xl shadow-md"
+            />
+          </div>
+          <div className="order-1 md:order-2 text-center md:text-left">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+              まずは無料カウンセリングで
+              <br />
+              あなたに合う相談所を見つけよう
+            </h2>
+            <p className="text-sm text-gray-600 mb-8 leading-relaxed">
+              6つの結婚相談所を比較して、
+              <br className="hidden md:block" />
+              あなたにぴったりの相談所を見つけてください。
+              <br className="hidden md:block" />
+              まずは無料カウンセリングから始めましょう。
+            </p>
+            <Link href="/ranking/" className="btn-cta text-base md:text-lg">
+              おすすめ6社の比較を見る
+            </Link>
+          </div>
         </div>
       </section>
     </>

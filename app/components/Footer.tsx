@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Site info */}
           <div>
             <p className="text-lg font-bold mb-2">結婚相談所比較ナビ</p>
-            <p className="text-sm text-pink-200 leading-relaxed">
+            <p className="text-sm text-amber-100/70 leading-relaxed">
               結婚相談所を徹底比較し、
               正直な情報をお届けするレビューサイトです。
               理想のパートナーとの出会いをサポートします。
@@ -17,47 +17,32 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="text-sm font-semibold mb-3 text-pink-200">
+            <p className="text-sm font-semibold mb-3 text-amber-200/80">
               ページ一覧
             </p>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   トップ
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/ranking/"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/ranking/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   おすすめ6選
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/ranking/#price-comparison"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/articles/price-comparison/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   料金比較
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/ranking/#reviews"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/reviews/zexy/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   業者レビュー
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/ranking/#flow"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/articles/should-i-join/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   婚活コラム
                 </Link>
               </li>
@@ -66,33 +51,30 @@ export default function Footer() {
 
           {/* Categories */}
           <div>
-            <p className="text-sm font-semibold mb-3 text-pink-200">
+            <p className="text-sm font-semibold mb-3 text-amber-200/80">
               カテゴリー
             </p>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/ranking/"
-                  className="text-sm text-pink-100 hover:text-white transition-colors"
-                >
+                <Link href="/ranking/" className="text-sm text-amber-100/60 hover:text-white transition-colors">
                   ランキング・比較
                 </Link>
               </li>
               <li>
-                <span className="text-sm text-pink-100">口コミ・評判</span>
+                <span className="text-sm text-amber-100/60">口コミ・評判</span>
               </li>
               <li>
-                <span className="text-sm text-pink-100">料金・費用</span>
+                <span className="text-sm text-amber-100/60">料金・費用</span>
               </li>
               <li>
-                <span className="text-sm text-pink-100">婚活の基礎知識</span>
+                <span className="text-sm text-amber-100/60">婚活の基礎知識</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-pink-900/50 text-center">
-          <p className="text-xs text-pink-300">
+        <div className="mt-10 pt-6 border-t border-white/10 text-center">
+          <p className="text-xs text-amber-100/40">
             &copy; {new Date().getFullYear()} 結婚相談所比較ナビ All Rights Reserved.
           </p>
         </div>

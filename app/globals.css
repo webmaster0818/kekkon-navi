@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #c45b84;
-  --color-primary-dark: #a8476d;
-  --color-primary-light: #fdf2f6;
+  --color-primary: #d4735e;
+  --color-primary-dark: #b85a47;
+  --color-primary-light: #fef5f2;
+  --color-secondary: #1e3a5f;
   --color-accent-gold: #c9a76c;
   --color-accent-gold-hover: #b8944f;
+  --color-cta: #e8864a;
+  --color-cta-hover: #d4733a;
   --color-lavender: #9b8ec4;
   --color-footer-bg: #1a1a2e;
   --color-text: #1e293b;
   --color-text-light: #64748b;
-  --color-bg: #ffffff;
-  --color-bg-section: #fdf8fa;
-  --color-border: #f0dde3;
+  --color-bg: #fffbf7;
+  --color-bg-section: #fdf8f5;
+  --color-border: #edddd5;
 }
 
 @theme inline {
   --font-sans: var(--font-noto-sans-jp);
+  --font-heading: var(--font-zen-maru-gothic);
   --color-primary: var(--color-primary);
   --color-primary-dark: var(--color-primary-dark);
   --color-primary-light: var(--color-primary-light);
@@ -32,6 +36,10 @@ body {
   line-height: 1.8;
 }
 
+h1, h2, h3 {
+  font-family: var(--font-zen-maru-gothic), var(--font-noto-sans-jp), sans-serif;
+}
+
 /* Card styles */
 .card {
   background: #ffffff;
@@ -42,7 +50,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 8px 30px rgba(196, 91, 132, 0.12);
+  box-shadow: 0 8px 30px rgba(212, 115, 94, 0.12);
   transform: translateY(-3px);
 }
 
@@ -52,20 +60,20 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.875rem 2rem;
-  background: linear-gradient(135deg, var(--color-accent-gold), #d4b87e);
+  background: linear-gradient(135deg, var(--color-cta), #f0a06a);
   color: #ffffff;
   font-weight: 700;
   border-radius: 9999px;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.3s ease;
   text-decoration: none;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(201, 167, 108, 0.3);
+  box-shadow: 0 4px 15px rgba(232, 134, 74, 0.3);
 }
 
 .btn-cta:hover {
-  background: linear-gradient(135deg, var(--color-accent-gold-hover), var(--color-accent-gold));
+  background: linear-gradient(135deg, var(--color-cta-hover), var(--color-cta));
   transform: scale(1.03);
-  box-shadow: 0 6px 20px rgba(201, 167, 108, 0.4);
+  box-shadow: 0 6px 20px rgba(232, 134, 74, 0.4);
 }
 
 .btn-outline {
@@ -100,6 +108,13 @@ body {
 /* Gradient text */
 .text-gradient {
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
